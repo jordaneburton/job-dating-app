@@ -1,9 +1,28 @@
 const router = require('express').Router();
 
-const user = require('./user');
-const jobs = require('./jobs');
-const { Module } = require('module');
-const applications = ('./applications.js')
+const User = require('./User.js');
+const Jobs = require('./Jobs.js');
 
+const Favorite = ('./Favorite.js')
 
-module.exports = router;
+Favorite.belongsToMany(User, {
+    through: {
+        model: Jobs,
+        unique: false
+    },
+    as: 'favorite_jobs'
+})
+  
+User.belongsToMany(Jobs, {
+    through: {
+        model: User,
+        unique:false
+    },
+
+    as:'user_jobs'
+
+})
+
+  
+  module.exports = { User, Jobs, Favorite };
+  
