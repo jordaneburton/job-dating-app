@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Riverboat Captain",
+        "description": "Ahoy! Looking to sail the high seas, but without the threat of pirates? Come be a riverboat captain!",
+        "salary": 72000,
+        "location": "The river"
+    },
+    {
+        "title": "Junior FullStack Developer",
+        "description": "Did you recently graduate from a coding bootcamp, but imposter syndrome has you wondering if you even made the right choice? Apply here! We promise to not be mean to you based on the results of your technical interview, no matter how weak your grasp of ORM programming is.",
+        "salary": 56000,
+        "location": "Amarillo, TX"
+    }
+]
