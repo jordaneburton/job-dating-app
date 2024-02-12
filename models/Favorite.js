@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const sequelize = require('../config/connections');
 
 class Favorite extends Model { }
 
@@ -11,32 +11,35 @@ Favorite.init(
       primaryKey: true,
       autoIncrement: true,
     },
+user_id: {
+  type: DataTypes.INTEGER,
+  references: {
+    model: 'user',
+    key:'id',
+    unique: false,
+  }
+},
+  jobs_id: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: 'jobs',
+      key: 'id',
+      unique: false
+    }
+    
+  }
 
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    description: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    location: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    salary: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-  },    
+  },
+    
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'jobs',
-  });
+    modelName: 'favorite',
+  }
+);
 
 
 
-module.export = applications;
+module.export = Favorite;

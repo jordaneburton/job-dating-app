@@ -5,33 +5,39 @@ const Jobs = require('./jobs.js');
 
 const Favorite = ('./Favorite.js')
 
-Favorite.hasMany(User, {
-    through: Jobs,
-    foreignKey: 'jobs_id' {
-    model: Jobs,
-    unique: false
-},
-    as: 'favorite_jobs'
+
+
+  
+ 
+ 
+User.belonsToMany(Jobs, {
+    through:{
+        model: Favorite,
+        unique:false
+    
+    },
+    as: 'user_jobs'
 })
 
-User.hasMany(Jobs, {
-    through: Favorite,
-    foreignKey: 'jobs_id'
-});
-
-Jobs.belongsToMany(Category, {
-
-    through: Favorite,
-    foreignKey: 'category_id',
-
-})
-
-Category.belongsToMany(Jobs, {
-    through: Favorite,
-    foreignKey: 'category_id',
-
+Jobs.belongsToMany(User, {
+    through:{
+        model: Favorite,
+        unique:false
+    },
+    as:'favorited_by'
+   
 })
 
 
-module.exports = { User, Jobs, Favorite };
 
+
+
+
+
+
+
+
+
+  
+  module.exports = { User, Jobs, Favorite };
+  

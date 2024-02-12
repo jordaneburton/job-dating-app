@@ -1,12 +1,18 @@
 [
     {
-        "name": "Jake Smith",
+        "first_name": "Jake",
+        "last_name": "Smith",
         "email": "jakerusmith@gmail.com",
-        "password": "nice try"
+        "password": "nice try",
+        "profileCreated": true,
+        "avatar": []
     },
     {
-        "name": "Jake Dennis",
+        "first_name": "John",
+        "last_name": "Dennis",
         "email": "johnnyD@gmail.com",
-        "password": "thisismyrealpassword"
+        "password": "thisismyrealpassword",
+        "profileCreated": true,
+        "avatar": []
     }
 ]
