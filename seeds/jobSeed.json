@@ -12,5 +12,117 @@
         "salary": 56000,
         "location": "Amarillo, TX",
         "avatar": "../public/images/mask.jpg"
-    }
+    },
+    {
+        "title": "Senior Data Scientist",
+        "description": "Are you a seasoned data wizard, capable of wrangling complex datasets and conjuring predictive models out of thin air? Join our team of elite data scientists and revolutionize the way we understand and utilize data!",
+        "salary": 100000,
+        "location": "San Francisco, CA",
+        "avatar": "../public/images/mask.jpg"
+    },
+    {
+        "title": "Senior Marketing Manager",
+        "description": "Are you an experienced marketing guru with a knack for crafting compelling campaigns that resonate with target audiences? Join our team and lead our marketing efforts to new heights!",
+        "salary": 80000,
+        "location": "New York City, NY",
+        "avatar": "../public/images/mask.jpg"
+    },
+    {
+        "title": "UX/UI Designer",
+        "description": "Are you a creative thinker with a passion for crafting intuitive user experiences and visually stunning interfaces? Join our team and shape the future of digital design!",
+        "salary": 65000,
+        "location": "Seattle, WA",
+        "avatar": "../public/images/mask.jpg"
+    },
+    {
+        "title": "Marketing Coordinator",
+        "description": "Are you a detail-oriented individual with a passion for marketing and event planning? Join our team and assist in coordinating marketing campaigns and events to drive brand awareness and engagement!",
+        "salary": 70000,
+        "location": "Chicago, IL",
+        "avatar": "../public/images/mask.jpg"
+    },
+    {
+        "title": "Customer Success Specialist",
+        "description": "Are you passionate about providing exceptional customer service and ensuring client satisfaction? Join our team and help us build strong relationships with our customers!",
+        "salary": 75000,
+        "location": "Denver, CO",
+        "avatar": "../public/images/watch.jpg"
+    },
+    {
+        "title": "Product Manager",
+        "description": "Are you a strategic thinker with a passion for building innovative products that solve real-world problems? Join our team and lead the development and execution of our product roadmap!",
+        "salary": 100000,
+        "location": "San Francisco, CA",
+        "avatar": "../public/images/geometric.jpg"
+    },
+    {
+        "title": "Senior Software Engineer",
+        "description": "Are you an experienced software engineer with a passion for building scalable and efficient applications? Join our team and work on cutting-edge technologies!",
+        "salary": 100000,
+        "location": "San Francisco, CA",
+        "avatar": ""
+      },
+      {
+        "title": "Data Analyst",
+        "description": "Are you skilled in data analysis and interpretation? Join our team and help us make data-driven decisions!",
+        "salary": 70000,
+        "location": "New York City, NY",
+        "avatar": ""
+      },
+      {
+        "title": "UX/UI Designer",
+        "description": "Are you a creative thinker with a knack for crafting intuitive user experiences and visually stunning interfaces? Join our team and shape the future of digital design!",
+        "salary": 75000,
+        "location": "Seattle, WA",
+        "avatar": ""
+      },
+      {
+        "title": "Marketing Manager",
+        "description": "Are you an experienced marketing professional with a passion for developing and executing successful marketing strategies? Join our team and lead our marketing efforts!",
+        "salary": 85000,
+        "location": "Chicago, IL",
+        "avatar": ""
+      },
+      {
+        "title": "Systems Administrator",
+        "description": "Do you have a strong understanding of system administration and network protocols? Join our team and ensure the stability and security of our IT infrastructure!",
+        "salary": 80000,
+        "location": "Austin, TX",
+        "avatar": ""
+      },
+      {
+        "title": "Digital Marketing Specialist",
+        "description": "Are you skilled in online marketing techniques and analytics? Join our team and help us expand our digital presence!",
+        "salary": 60000,
+        "location": "Los Angeles, CA",
+        "avatar": ""
+      },
+      {
+        "title": "Financial Analyst",
+        "description": "Are you adept at financial modeling and analysis? Join our team and help us make informed financial decisions!",
+        "salary": 90000,
+        "location": "Boston, MA",
+        "avatar": ""
+      },
+      {
+        "title": "Mobile App Developer",
+        "description": "Are you proficient in mobile app development for iOS and Android platforms? Join our team and create cutting-edge mobile applications!",
+        "salary": 85000,
+        "location": "Denver, CO",
+        "avatar": ""
+      },
+      {
+        "title": "HR Manager",
+        "description": "Are you an experienced HR professional with a passion for talent acquisition and employee relations? Join our team and lead our HR initiatives!",
+        "salary": 95000,
+        "location": "Houston, TX",
+        "avatar": ""
+      },
+      {
+        "title": "Content Writer",
+        "description": "Are you skilled in crafting compelling and engaging content? Join our team and help us create impactful content for our audience!",
+        "salary": 115000,
+        "location": "Philadelphia, PA",
+        "avatar": ""
+      }
 ]
