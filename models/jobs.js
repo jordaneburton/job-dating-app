@@ -24,8 +24,8 @@ Jobs.init(
     type: DataTypes.STRING,
     allowNull:false
 },
-    salary: {
-        type: DataTypes.INTEGER,
+    salary_range: {
+        type: DataTypes.STRING,
         allowNull: true
     },
     
