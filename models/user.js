@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const sequelize = require('../config/connections');
 const bcrypt = require('bcrypt');
 
 class User extends Model {
@@ -16,7 +16,11 @@ class User extends Model {
         primaryKey: true,
         autoIncrement: true,
       },
-      name: {
+      first_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      last_name: {
         type: DataTypes.STRING,
         allowNull: false,
       },
@@ -35,16 +39,18 @@ class User extends Model {
           len: [10],
         },
       },
-      savedJobs: {
-        type: DataTypes.STRING,
-        allowNull: true,
-
-      },
+      
 
       location : {
         type: DataTypes.STRING,
         allowNull: false
       },
+      profile : {
+        type:DataTypes.STRING,
+        allowNull:false,
+        default:false,
+      },
+     
     },
     {
       hooks: {
@@ -61,7 +67,7 @@ class User extends Model {
       timestamps: false,
       freezeTableName: true,
       underscored: true,
-      modelName: 'User',
+      modelName: 'user',
     }
   );
   
