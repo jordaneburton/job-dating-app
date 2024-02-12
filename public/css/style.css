@@ -1,30 +1,34 @@
 body {
-    background-image: url(../millo-lin-IbngTBpNuMA-unsplash.jpg);
+    background-image: url(../images/background.jpg);
     background-size: cover;
 }
 
 #signCard {
-    opacity: 90%;
-    background-color: black;
-    color:white;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
     box-shadow: 0 0 .2rem #fff,
-    0 0 .2rem #fff,
-    0 0 2rem #0fdee6,
-    0 0 0.8rem #0fdee6,
-    0 0 2.8rem #0fdee6,
-    inset 0 0 1.3rem #0fdee6;
+        0 0 .2rem #fff,
+        0 0 2rem #0fdee6,
+        0 0 0.8rem #0fdee6,
+        0 0 2.8rem #0fdee6,
+        inset 0 0 1.3rem #0fdee6;
 }
 
-.page-title { 
+.page-title {
     text-shadow:
-    0 0 7px #0fdee6,
-    0 0 10px #0fdee6,
-    0 0 21px #0fdee6;
+        0 0 7px #0fdee6,
+        0 0 10px #0fdee6,
+        0 0 21px #0fdee6;
 }
 
-.nav-link{
-text-shadow:
-0 0 7px #0fdee6,
-0 0 10px #0fdee6,
-0 0 21px #0fdee6;
+.nav-link {
+    text-shadow:
+        0 0 7px #0fdee6,
+        0 0 10px #0fdee6,
+        0 0 21px #0fdee6;
+}
+
+ul>img {
+    height: 80px;
+    width: 160px;
 }
