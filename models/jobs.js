@@ -18,6 +18,7 @@ Jobs.init(
     },
     description: {
       type: DataTypes.STRING,
+      allowNull:false
     },
   location: {
     type: DataTypes.STRING,
@@ -30,6 +31,7 @@ Jobs.init(
 
     avatar : {
         type: DataTypes.STRING
+      
       
     },
     category_name : {
