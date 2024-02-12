@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes, STRING } = require('sequelize');
 const sequelize = require('../config/connection');
 
 
@@ -20,10 +20,21 @@ Jobs.init(
       type: DataTypes.STRING,
     },
   location: {
-    type: DataTypes.STRING
+    type: DataTypes.STRING,
+    allowNull:false
 },
     salary: {
-        type: DataTypes.INTEGER
+        type: DataTypes.INTEGER,
+        allowNull: true
+    },
+
+    avatar : {
+        type: DataTypes.STRING
+      
+    },
+    category_name : {
+      type:DataTypes.STRINGSTRING,
+      allowNull: false
     },
     
     user_id: {

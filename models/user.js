@@ -40,6 +40,11 @@ class User extends Model {
         allowNull: true,
 
       },
+
+      location : {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
     },
     {
       hooks: {

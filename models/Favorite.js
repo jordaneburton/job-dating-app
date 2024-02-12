@@ -13,6 +13,25 @@ Favorite.init(
       primaryKey: true,
       autoIncrement: true,
     },
+
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    description: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+  location: {
+    type: DataTypes.STRING,
+    allowNull: false
+},
+    salary: {
+        type: DataTypes.INTEGER,
+        allowNull:false
+    },
+
+
     
   {
     sequelize,
