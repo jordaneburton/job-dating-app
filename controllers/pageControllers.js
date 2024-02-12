@@ -21,7 +21,7 @@ module.exports = {
 
     getJobs: async (req, res) => {
         try {
-            return res.render('homepage', {
+            return res.render('jobs', {
                 // logged_in: req.session.logged_in 
             });
         } catch (err) {
@@ -37,9 +37,9 @@ module.exports = {
             // Serialize data so the template can read it
             const user = userData.get({ plain: true });
         
-            return res.render('homepage', {
+            return res.render('profile', {
                 // attributes: { exclude: ['password'] }
-                user     // ONLY ONE OF THESE SHOULD BE USED
+                user: user     // ONLY ONE OF THESE SHOULD BE USED
             });
         } catch (err) {
             res.status(500).json(err);
@@ -48,7 +48,7 @@ module.exports = {
 
     getLogin: async (req, res) => {
         try {
-            return res.render('homepage', {
+            return res.render('login', {
             });
         } catch (err) {
             res.status(500).json(err);

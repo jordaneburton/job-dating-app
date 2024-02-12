@@ -17,7 +17,7 @@ router.route('/home') // TEMPORARY home page router
 router.route('/jobs')
 .get(getJobs)
 
-router.route('/profile')
+router.route('/profile/:id')
 .get(getProfile)
 
 router.route('/login')
