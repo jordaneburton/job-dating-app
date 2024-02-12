@@ -28,6 +28,7 @@ Jobs.init(
         type: DataTypes.INTEGER,
         allowNull: true
     },
+    
 
     
     category_name : {

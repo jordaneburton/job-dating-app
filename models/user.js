@@ -39,12 +39,17 @@ class User extends Model {
           len: [10],
         },
       },
+      avatar: {
+        type: DataTypes.STRING,
+        allowNull:true
+      },
       
 
       location : {
         type: DataTypes.STRING,
         allowNull: false
       },
+      
       profile : {
         type:DataTypes.STRING,
         allowNull:false,
