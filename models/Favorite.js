@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const sequelize = require('../config/connections');
 
 
 //
@@ -13,35 +13,35 @@ Favorite.init(
       primaryKey: true,
       autoIncrement: true,
     },
-
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    description: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-  location: {
-    type: DataTypes.STRING,
-    allowNull: false
+user_id: {
+  type: DataTypes.INTEGER,
+  references: {
+    model: 'user',
+    key:'id',
+    unique: false,
+  }
 },
-    salary: {
-        type: DataTypes.INTEGER,
-        allowNull:false
-    },
+  jobs_id: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: 'jobs',
+      key: 'id',
+      unique: false
+    }
+    
+  }
 
-
+  },
     
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'jobs',
+    modelName: 'favorite',
   }
-});
+);
 
 
 
-module.export = applications;
+module.export = Favorite;
