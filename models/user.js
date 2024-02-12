@@ -61,7 +61,7 @@ class User extends Model {
       timestamps: false,
       freezeTableName: true,
       underscored: true,
-      modelName: 'User',
+      modelName: 'user',
     }
   );
   

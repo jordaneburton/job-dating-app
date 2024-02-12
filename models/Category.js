@@ -1,5 +1,5 @@
 Category.init(
-    
+    {
       id:{
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -31,7 +31,7 @@ Category.init(
         allowNull: true,
     },
 
-      
+  },
     {
       sequelize,
       timestamps: false,

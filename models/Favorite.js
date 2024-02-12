@@ -1,9 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-
-//
-class Favorite extends Model {}
+class Favorite extends Model { }
 
 Favorite.init(
   {
@@ -22,25 +20,22 @@ Favorite.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-  location: {
-    type: DataTypes.STRING,
-    allowNull: false
-},
-    salary: {
-        type: DataTypes.INTEGER,
-        allowNull:false
+    location: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
-
-
-    
+    salary: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+  },    
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'jobs',
-  }
-});
+  });
 
 
 

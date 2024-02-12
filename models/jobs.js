@@ -2,7 +2,7 @@ const { Model, DataTypes, STRING } = require('sequelize');
 const sequelize = require('../config/connection');
 
 
-class Jobs extends Model {}
+class Jobs extends Model { }
 
 Jobs.init(
   {
@@ -19,24 +19,24 @@ Jobs.init(
     description: {
       type: DataTypes.STRING,
     },
-  location: {
-    type: DataTypes.STRING,
-    allowNull:false
-},
-    salary: {
-        type: DataTypes.INTEGER,
-        allowNull: true
-    },
-
-    avatar : {
-        type: DataTypes.STRING
-      
-    },
-    category_name : {
-      type:DataTypes.STRINGSTRING,
+    location: {
+      type: DataTypes.STRING,
       allowNull: false
     },
-    
+    salary: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+
+    avatar: {
+      type: DataTypes.STRING
+
+    },
+    category_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -50,7 +50,7 @@ Jobs.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Jobs',
+    modelName: 'jobs',
   }
 );
 
