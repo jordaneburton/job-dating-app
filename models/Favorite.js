@@ -11,26 +11,23 @@ Favorite.init(
       primaryKey: true,
       autoIncrement: true,
     },
-user_id: {
-  type: DataTypes.INTEGER,
-  references: {
-    model: 'user',
-    key:'id',
-    unique: false,
-  }
-},
-  jobs_id: {
-    type: DataTypes.INTEGER,
-    references: {
-      model: 'jobs',
-      key: 'id',
-      unique: false
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+        unique: false,
+      }
+    },
+    jobs_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'jobs',
+        key: 'id',
+        unique: false
+      }
     }
-    
-  }
-
   },
-    
   {
     sequelize,
     timestamps: false,
