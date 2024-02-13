@@ -16,31 +16,43 @@
         <main class="container container-fluid mt-3">
             <div class="row justify-space-between-md">
                 <div class="container-fluid" style="width: 550px">
-                    <div class="profile-card">
+                    <div class="login-card">
                         <h2 class="page-title text-center">Profile Creation!</h2>
-                        <form class="form profile-form">
+                        <form class="form login-form">
 
                             <div class="form-group d-flex justify-content-end my-3">
-                                <label class="px-2 fs-5">First Name:</label>
+                                <label class="px-2 fs-5 me-2">First Name:</label>
                                 <input class="form-input rounded-2" type="text" style="width:250px" id="profile-first" />
                             </div>
                             <form class="form signup-form">
                                 <div class="form-group d-flex justify-content-end my-3">
-                                    <label class="px-2 fs-5">Last Name: </label>
+                                    <label class="px-2 fs-5 me-2">Last Name: </label>
                                     <input class="form-input rounded-2" type="text" style="width:250px"
                                         id="profile-last" />
                                 </div>
                                 <div class="form-group d-flex justify-content-end my-3 ms-4">
-                                    <label class=" fs-5 text-center">Most Recent Job Title: </label>
+                                    <label class=" fs-5 text-center me-2">Most Recent Job Title: </label>
                                     <input class="form-input rounded-2" type="text" style="width:250px; height:30px" id="profile-recent-job" />
                                 </div>
                                 <div class="form-group d-flex justify-content-end my-3">
-                                    <label class="fs-5 text-center">Job Category To Search For: </label>
-                                    <input class="form-input rounded-2" type="text" style="width:250px; height:30px" id="profile-category" />
+                                    <span class="fs-5 text-center me-2">Job Category:</span>
+                                    <select class="form-select text-center" aria-label="Default select example" style="width:250px; height:35px" id="profile-salary">
+                                        <option selected>Choose Your Category</option>
+                                        <option>40000-60000</option>
+                                        <option>60000-80000</option>
+                                        <option>80000-100000</option>
+                                        <option>100000-120000</option>
+                                    </select>
                                 </div>
                                 <div class="form-group d-flex justify-content-end my-3">
-                                    <label class="fs-5 text-center">Job Salary Range Required: </label>
-                                    <input class="form-input rounded-2" type="text" style="width:250px; height:30px" id="profile-salary" />
+                                    <span class="fs-5 text-center me-2">Job Salary Required:</span>
+                                    <select class="form-select text-center" aria-label="Default select example" style="width:250px; height:35px" id="profile-salary">
+                                        <option selected>Choose Your Salary</option>
+                                        <option>40000-60000</option>
+                                        <option>60000-80000</option>
+                                        <option>80000-100000</option>
+                                        <option>100000-120000</option>
+                                    </select>
                                 </div>
                                 <div class="form-group d-flex justify-content-end my-3">
                                     <label class="fs-5 text-center">Short Bio: </label>
