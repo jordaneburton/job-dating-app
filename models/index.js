@@ -10,7 +10,7 @@ const Favorite = ('./Favorite.js')
   
  
  
-User.belonsToMany(Jobs, {
+User.belongsToMany(Jobs, {
     through:{
         model: Favorite,
         unique:false
