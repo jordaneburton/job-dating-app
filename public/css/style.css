@@ -36,9 +36,9 @@ ul>img {
 .swipe-card {
     width: 20rem;
     height: 24rem;
-    animation-name: stack-card;
+    /* animation-name: stack-card;
     animation-duration: 8s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite; */
 }
 
 .swipe-btn {
