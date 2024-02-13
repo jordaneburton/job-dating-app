@@ -41,6 +41,13 @@ ul>img {
     animation-iteration-count: infinite;
 }
 
+.swipe-btn {
+    width: 4rem;
+    height: 10rem;
+    margin-right: 10rem;
+    margin-left: 10rem;
+}
+
 /* TEMPORARY ANIMATION FOR PROOF OF CONCEPT */
 @keyframes stack-card {
     0%   {bottom: 3rem; z-index: -3;}
