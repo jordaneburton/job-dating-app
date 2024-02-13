@@ -1,8 +1,21 @@
 const frontSwipeCardEl = document.querySelector('.front-card');
 const swipeCardEl = document.querySelectorAll('.swipe-card');
 
+
+
 // front card animate it to the side
 // rest of the cards pull them down by whatever margin and change z-index
+
+// const response = await fetch('/api/job', {
+//   method: 'GET'
+// });
+
+// if (response.ok) {
+//   const jobCards = JSON.parse(response.json());
+// } else {
+//   alert('Failed to log in');
+// }
+
 
 function setJobCard(cardEl, cardPos) {
   anime({
@@ -65,4 +78,6 @@ function saveJob(cardEl) {
   // remove card from queue
 };
 
-pullJobDown(frontSwipeCardEl, 3)
+
+
+saveJob(frontSwipeCardEl)
