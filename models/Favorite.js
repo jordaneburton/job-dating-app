@@ -16,7 +16,6 @@ Favorite.init(
       references: {
         model: 'user',
         key: 'id',
-        unique: false,
       }
     },
     jobs_id: {
@@ -24,7 +23,6 @@ Favorite.init(
       references: {
         model: 'jobs',
         key: 'id',
-        unique: false
       }
     }
   },
