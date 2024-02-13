@@ -44,14 +44,9 @@ User.init(
       allowNull: true
     },
 
-    location: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-
     profile: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       default: false,
     },
 

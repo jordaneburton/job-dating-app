@@ -4,7 +4,7 @@ const Jobs = require('./jobs.js');
 
 const Favorite = ('./Favorite.js')
 
-User.belonsToMany(Jobs, {
+User.belongsToMany(Jobs, {
     through: {
         model: Favorite,
         unique: false
@@ -19,7 +19,6 @@ Jobs.belongsToMany(User, {
         unique: false
     },
     as: 'favorited_by'
-
 })
 
 module.exports = { User, Jobs, Favorite };
