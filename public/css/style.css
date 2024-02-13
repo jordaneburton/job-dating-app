@@ -42,10 +42,11 @@ ul>img {
 }
 
 .swipe-btn {
-    width: 4rem;
-    height: 10rem;
-    margin-right: 10rem;
-    margin-left: 10rem;
+    width: 6rem;
+    height: 3rem;
+    margin-right: 4rem;
+    margin-left: 4rem;
+    /* top: 34rem; */
 }
 
 /* TEMPORARY ANIMATION FOR PROOF OF CONCEPT */
@@ -57,4 +58,28 @@ ul>img {
     85%  {right: 25rem; z-index: 0;}
     86%  {z-index: -3;}
     100% {bottom: 3rem; right: 0rem; z-index: -3;}
+}
+
+@media (min-height: 576px) and (max-width: 992px) {
+    .swipe-btn {
+        top: 34rem;
+    }
+    
+}
+
+@media (min-height: 768px) and (max-width: 992px) {
+    .swipe-btn {
+        width: 8rem;
+        height: 4rem;
+        top: 44rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .swipe-btn {
+        width: 4rem;
+        height: 10rem;
+        margin-right: 10rem;
+        margin-left: 10rem;
+    }
 }
