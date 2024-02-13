@@ -11,16 +11,11 @@ const Favorite = ('./Favorite.js')
   
  
  
-User.belongsToMany(Jobs, {
-    through:{
 
 User.belongsToMany(Jobs, {
-    through: {
-        model: Favorite,
-        unique: false
-
-    },
-    as: 'user_jobs'
+    through: Favorite,
+    as: 'user_jobs',
+    foreignKey: "user_id"
 })
 
 Jobs.belongsToMany(User, {
@@ -32,26 +27,22 @@ Jobs.belongsToMany(User, {
 })
 
 User.belongsTo(Profile, {
-    through:{
-        model:Favorite,
-        unique:false
-    },
-    as:'user_profile'
+  
+    as:'user_profile',
+    foreignKey: "user_id"
 })
 
 
-Profile.belongsTo(User, {
-    through:{
-        model:Favorite,
-        unique:false
-    },
-    as: 'profile_data'
+Profile.hasOne(User, {
+   
+    as: 'profile_data',
+    foreignKey: "profile_id"
 })
 
 
 module.exports = { User, Jobs, Favorite, Profile };
   
 
-module.exports = { User, Jobs, Favorite };
+
 
 

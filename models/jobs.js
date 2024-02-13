@@ -37,7 +37,7 @@ Jobs.init(
     category_name : {
       type:DataTypes.STRING,
       allowNull: false
-
+    },
     salary: {
       type: DataTypes.INTEGER,
       allowNull: true
