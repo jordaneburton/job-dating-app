@@ -1,9 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connections');
 
-
-//
-class Favorite extends Model {}
+class Favorite extends Model { }
 
 Favorite.init(
   {
@@ -13,26 +11,21 @@ Favorite.init(
       primaryKey: true,
       autoIncrement: true,
     },
-user_id: {
-  type: DataTypes.INTEGER,
-  references: {
-    model: 'user',
-    key:'id',
-    unique: false,
-  }
-},
-  jobs_id: {
-    type: DataTypes.INTEGER,
-    references: {
-      model: 'jobs',
-      key: 'id',
-      unique: false
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      }
+    },
+    jobs_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'jobs',
+        key: 'id',
+      }
     }
-    
-  }
-
   },
-    
   {
     sequelize,
     timestamps: false,

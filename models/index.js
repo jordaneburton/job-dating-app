@@ -1,5 +1,4 @@
 const router = require('express').Router();
-
 const User = require('./user.js');
 const Jobs = require('./jobs.js');
 const Profile = require('./profile.js');
@@ -8,25 +7,28 @@ const Favorite = ('./Favorite.js')
 
 
 
+
   
  
  
 User.belongsToMany(Jobs, {
     through:{
+
+User.belongsToMany(Jobs, {
+    through: {
         model: Favorite,
-        unique:false
-    
+        unique: false
+
     },
     as: 'user_jobs'
 })
 
 Jobs.belongsToMany(User, {
-    through:{
+    through: {
         model: Favorite,
-        unique:false
+        unique: false
     },
-    as:'favorited_by'
-   
+    as: 'favorited_by'
 })
 
 User.belongsTo(Profile, {
@@ -49,3 +51,7 @@ Profile.belongsTo(User, {
 
 module.exports = { User, Jobs, Favorite, Profile };
   
+
+module.exports = { User, Jobs, Favorite };
+
+

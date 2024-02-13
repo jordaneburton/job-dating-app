@@ -1,8 +1,8 @@
-const { Model, DataTypes, STRING } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connections');
 
 
-class Jobs extends Model {}
+class Jobs extends Model { }
 
 Jobs.init(
   {
@@ -17,9 +17,14 @@ Jobs.init(
       allowNull: false,
     },
     description: {
-      type: DataTypes.STRING,
-      allowNull:false
+      type: DataTypes.TEXT,
+      allowNull: false
     },
+    location: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+
   location: {
     type: DataTypes.STRING,
     allowNull:false
@@ -32,9 +37,16 @@ Jobs.init(
     category_name : {
       type:DataTypes.STRING,
       allowNull: false
+
+    salary: {
+      type: DataTypes.INTEGER,
+      allowNull: true
     },
-    
-    
+    category_name: {
+      type: DataTypes.STRING,
+      allowNull: true
+
+    },
   },
   {
     sequelize,
