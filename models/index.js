@@ -5,15 +5,6 @@ const Profile = require('./profile.js');
 
 const Favorite = ('./Favorite.js')
 
-
-
-
-  
- 
- 
-User.belongsToMany(Jobs, {
-    through:{
-
 User.belongsToMany(Jobs, {
     through: {
         model: Favorite,
@@ -41,17 +32,14 @@ User.belongsTo(Profile, {
 
 
 Profile.belongsTo(User, {
-    through:{
-        model:Favorite,
-        unique:false
-    },
-    as: 'profile_data'
+    foreignKey:"user_id"
 })
 
 
-module.exports = { User, Jobs, Favorite, Profile };
-  
+User.hasOne(Profile, {
+    foreignKey:"user_id"
+})
 
-module.exports = { User, Jobs, Favorite };
+module.exports = { User, Jobs, Favorite, Profile };
 
 

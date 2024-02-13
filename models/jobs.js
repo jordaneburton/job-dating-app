@@ -24,28 +24,17 @@ Jobs.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-
-  location: {
-    type: DataTypes.STRING,
-    allowNull:false
-},
-    salary_range: {
-        type: DataTypes.STRING,
-        allowNull: true
-    },
-    
-    category_name : {
-      type:DataTypes.STRING,
-      allowNull: false
-
-    salary: {
-      type: DataTypes.INTEGER,
-      allowNull: true
-    },
     category_name: {
       type: DataTypes.STRING,
+      allowNull: false
+    },
+    avatar: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    salary: {
+      type: DataTypes.STRING,
       allowNull: true
-
     },
   },
   {
