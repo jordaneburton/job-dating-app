@@ -4,7 +4,7 @@ const { getHome,
         getProfile, 
         getLogin 
     } = require('../controllers/pageControllers');
-const { withAuth } = require('../utils/helpers');
+const withAuth = require('../utils/helpers');
 
 router.route('/') // TEMPORARY home page router
 .get(withAuth, getHome)
