@@ -8,10 +8,7 @@ const { getFunc,
 const { withAuth } = require('../utils/helpers');
 
 
-router.route('/') // POST-PRODUCTION home page router
-.get(getFunc);
-
-router.route('/home') // TEMPORARY home page router
+router.route('/') // TEMPORARY home page router
 .get(getHome)
 
 router.route('/jobs')
