@@ -4,8 +4,7 @@ const swipeCardEl = document.querySelectorAll('.swipe-card');
 // front card animate it to the side
 // rest of the cards pull them down by whatever margin and change z-index
 
-function setJobCards(cardEl, cardPos) {
-  // should take in four cards
+function setJobCard(cardEl, cardPos) {
   anime({
     targets: cardEl,
     bottom: `${cardPos}rem`,
@@ -21,14 +20,12 @@ function setJobCards(cardEl, cardPos) {
 
 }
 
-function pullJobDown(cardEl) {
+function pullJobDown(cardEl, cardPos) {
   anime({
     targets: cardEl,
     keyframes: [
       {translateY: '1rem'},
-      {'z-index': 3},
-      {translateY: '-1rem'},
-      {'z-index': -3},
+      {'z-index': `-${cardPos}`},
     ],
     easing: 'easeInOutExpo',
 
@@ -68,4 +65,4 @@ function saveJob(cardEl) {
   // remove card from queue
 };
 
-setJobCards(frontSwipeCardEl, 3)
+pullJobDown(frontSwipeCardEl, 3)
