@@ -32,3 +32,21 @@ ul>img {
     height: 80px;
     width: 160px;
 }
+
+.swipe-card {
+    width: 20rem;
+    height: 24rem;
+    animation-name: stack-card;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+/* TEMPORARY ANIMATION FOR PROOF OF CONCEPT */
+@keyframes stack-card {
+    0%   {bottom: 3rem; z-index: -3;}
+    25%  {bottom: 2rem; z-index: -2;}
+    50%  {bottom: 1rem; z-index: -1;}
+    75%  {bottom: 0rem; z-index: 0; right: 0rem}
+    85%  {right: 25rem;}
+    100% {bottom: 3rem; right: 0rem; z-index: -3;}
+}
