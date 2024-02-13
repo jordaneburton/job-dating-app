@@ -5,7 +5,7 @@
         "salary": "60000-80000",
         "location": "The river",
         "avatar": "../public/images/watch.jpg",
-        "Category": "Technology"
+        "category_name": "Technology"
     },
     {
         "title": "Junior FullStack Developer",
@@ -13,7 +13,7 @@
         "salary": "40000-60000",
         "location": "Amarillo, TX",
         "avatar": "../public/images/mask.jpg",
-        "Category": "Technology"
+        "category_name": "Technology"
     },
     {
         "title": "Senior Data Scientist",
@@ -21,7 +21,7 @@
         "salary": "100000-120000",
         "location": "San Francisco, CA",
         "avatar": "../public/images/mask.jpg",
-        "Category": "Technology"
+        "category_name": "Technology"
     },
     {
         "title": "Senior Marketing Manager",
@@ -29,7 +29,7 @@
         "salary": "60000-80000",
         "location": "New York City, NY",
         "avatar": "../public/images/mask.jpg",
-        "Category": "Business"
+        "category_name": "Business"
     },
     {
         "title": "UX/UI Designer",
@@ -37,7 +37,7 @@
         "salary": "60000-80000",
         "location": "Seattle, WA",
         "avatar": "../public/images/mask.jpg",
-        "Category": "Technology"
+        "category_name": "Technology"
     },
     {
         "title": "Marketing Coordinator",
@@ -45,7 +45,7 @@
         "salary": "60000-80000",
         "location": "Chicago, IL",
         "avatar": "../public/images/mask.jpg",
-        "Category": "Business"
+        "category_name": "Business"
     },
     {
         "title": "Customer Success Specialist",
@@ -53,7 +53,7 @@
         "salary": "60000-80000",
         "location": "Denver, CO",
         "avatar": "../public/images/watch.jpg",
-        "Category": "Customer Service"
+        "category_name": "Customer Service"
     },
     {
         "title": "Product Manager",
@@ -61,7 +61,7 @@
         "salary": "100000-120000",
         "location": "San Francisco, CA",
         "avatar": "../public/images/geometric.jpg",
-        "Category": "Business"
+        "category_name": "Business"
     },
     {
         "title": "Senior Software Engineer",
@@ -69,7 +69,7 @@
         "salary": "80000-100000",
         "location": "San Francisco, CA",
         "avatar": "",
-        "Category": "Technology"
+        "category_name": "Technology"
       },
       {
         "title": "Data Analyst",
@@ -77,7 +77,7 @@
         "salary": "60000-80000",
         "location": "New York City, NY",
         "avatar": "",
-        "Category": "Technology"
+        "category_name": "Technology"
       },
       {
         "title": "UX/UI Designer",
@@ -85,7 +85,7 @@
         "salary": "60000-80000",
         "location": "Seattle, WA",
         "avatar": "",
-        "Category": "Technology"
+        "category_name": "Technology"
       },
       {
         "title": "Marketing Manager",
@@ -93,7 +93,7 @@
         "salary": "80000-100000",
         "location": "Chicago, IL",
         "avatar": "",
-        "Category": "Business"
+        "category_name": "Business"
       },
       {
         "title": "Systems Administrator",
@@ -101,7 +101,7 @@
         "salary": "80000-100000",
         "location": "Austin, TX",
         "avatar": "",
-        "Category": "Technology"
+        "category_name": "Technology"
       },
       {
         "title": "Digital Marketing Specialist",
@@ -109,7 +109,7 @@
         "salary": "40000-60000",
         "location": "Los Angeles, CA",
         "avatar": "",
-        "Category": "Business"
+        "category_name": "Business"
       },
       {
         "title": "Financial Analyst",
@@ -117,7 +117,7 @@
         "salary": "80000-100000",
         "location": "Boston, MA",
         "avatar": "",
-        "Category": "Business"
+        "category_name": "Business"
       },
       {
         "title": "Mobile App Developer",
@@ -125,7 +125,7 @@
         "salary": "80000-100000",
         "location": "Denver, CO",
         "avatar": "",
-        "Category": "Technology"
+        "category_name": "Technology"
       },
       {
         "title": "HR Manager",
@@ -133,7 +133,7 @@
         "salary": "80000-100000",
         "location": "Houston, TX",
         "avatar": "",
-        "Category": "Human Resources"
+        "category_name": "Human Resources"
       },
       {
         "title": "Content Writer",
@@ -141,6 +141,6 @@
         "salary": "100000-120000",
         "location": "Philadelphia, PA",
         "avatar": "",
-        "Category": "Creative Writing"
+        "category_name": "Creative Writing"
       }
 ]
