@@ -29,7 +29,15 @@ Jobs.belongsToMany(User, {
    
 })
 
-Profile.belongsToOne(User, {
+User.belongsTo(Profile, {
+    through:{
+        model:Favorite,
+        unique:false
+    }
+})
+
+
+Profile.belongsTo(User, {
     through:{
         model:Favorite,
         unique:false
