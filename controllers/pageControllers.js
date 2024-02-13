@@ -12,7 +12,7 @@ module.exports = {
     getHome: async (req, res) => {
         try {
             return res.render('homepage', {
-                // logged_in: req.session.logged_in 
+                logged_in: req.session.logged_in 
             });
         } catch (err) {
             res.status(500).json(err);
@@ -22,7 +22,7 @@ module.exports = {
     getJobs: async (req, res) => {
         try {
             return res.render('jobs', {
-                // logged_in: req.session.logged_in 
+                logged_in: req.session.logged_in 
             });
         } catch (err) {
             res.status(500).json(err);
