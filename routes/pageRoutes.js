@@ -7,7 +7,7 @@ const { getHome,
 const { withAuth } = require('../utils/helpers');
 
 router.route('/') // TEMPORARY home page router
-.get(getHome)
+.get(withAuth, getHome)
 
 router.route('/jobs')
 .get(getJobs)
