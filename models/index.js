@@ -33,7 +33,8 @@ User.belongsTo(Profile, {
     through:{
         model:Favorite,
         unique:false
-    }
+    },
+    as:'user_profile'
 })
 
 
@@ -41,19 +42,10 @@ Profile.belongsTo(User, {
     through:{
         model:Favorite,
         unique:false
-    }
+    },
+    as: 'profile_data'
 })
 
 
-
-
-
-
-
-
-
-
-
-  
-  module.exports = { User, Jobs, Favorite,Profile };
+module.exports = { User, Jobs, Favorite, Profile };
   
