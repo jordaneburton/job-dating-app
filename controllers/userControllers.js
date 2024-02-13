@@ -1,4 +1,4 @@
-const { User } = require('../models/user')
+const { User } = require('../models/')
 
 module.exports = {
     getFunc: async (req, res) => {
@@ -21,15 +21,20 @@ module.exports = {
     postFunc: async (req, res) => {
         try {
             const userData = await User.create({
-                first_name: req.body.first_name,
-                last_name: req.body.last_name,
+                user_name: req.body.user_name,
                 email: req.body.email,
-                password: req.user.password,
-                profileCreated: false,
-                avater: null,
+                password: req.body.password,
             });
+
+            req.session.save(() => {
+                req.session.user_id = userData.id;
+                req.session.logged_in = true;
+                
+            console.log(userData)
             res.status(200).json({ userData })
+            })
         } catch (err) {
+            console.error(err);
             res.status(500).json(err);
         }
     },
