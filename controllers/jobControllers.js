@@ -1,18 +1,41 @@
-const { Job } = require('../models/user')
+const { Job } = require('../models/jobs')
 
+//pass to homepage
 module.exports = {
     getFunc: async (req, res) => {
         try {
-            res.status(200).json({message: 'SUCCESS: GET connected to jobRoutes'})
+            Job.findAll({
+            })
+                .then(jobs => res.status(200).json({ message: 'SUCCESS: GET connected to jobRoutes' })
+                )
         } catch (err) {
-            res.status(500).json(err);
+            res.status(404).json(err);
         }
     },
     postFunc: async (req, res) => {
         try {
-            res.status(200).json({message: 'SUCCESS: POST connected to jobRoutes'})
+            Job.create(req.body)
+                .then(newJob => res.json(newJob))
+            res.status(200).json({ message: 'SUCCESS: POST connected to jobRoutes' })
         } catch (err) {
-            res.status(500).json(err);
+            res.status(400).json(err);
         }
     },
+    //id
+    deleteFunc: async (req, res) => {
+        Job.destroy({
+            where: 
+            {
+                id: req.params.id
+            }
+        })
+        .then(deletedJob => {
+            if(!deletedJob) {
+                res.status(400).json({ message: "Could not delete job"});
+                return;
+            };
+            res.json(deletedJob);
+        })
+        .catch(err => res.status(500).json(err));
+    }
 }
