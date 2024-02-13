@@ -17,7 +17,7 @@ Jobs.init(
       allowNull: false,
     },
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false
     },
     location: {
@@ -30,7 +30,7 @@ Jobs.init(
     },
     category_name: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
   },
   {
