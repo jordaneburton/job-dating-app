@@ -11,4 +11,9 @@ router.route('/')
 .get(withAuth, getFunc)
 .post(postFunc);
 
+router.route('/login')
+.post(loginFunc);
+
+
+
 module.exports = router;
