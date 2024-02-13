@@ -3,11 +3,17 @@ const {
   getFunc,
   postFunc,
 } = require('../../controllers/userControllers');
-const { withAuth } = require('../utils/helpers');
+
+const withAuth  = require('../../utils/helpers');
 
 
 router.route('/')
-.get(getFunc)
+.get(withAuth, getFunc)
 .post(postFunc);
+
+router.route('/login')
+.post(loginFunc);
+
+
 
 module.exports = router;
