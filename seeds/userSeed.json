@@ -4,15 +4,13 @@
         "last_name": "Smith",
         "email": "jakerusmith@gmail.com",
         "password": "nice try",
-        "profileCreated": true,
-        "avatar": []
+        "avatar": null
     },
     {
         "first_name": "John",
         "last_name": "Dennis",
         "email": "johnnyD@gmail.com",
         "password": "thisismyrealpassword",
-        "profileCreated": true,
-        "avatar": []
+        "avatar": null
     }
 ]

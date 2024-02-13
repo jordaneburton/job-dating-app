@@ -44,12 +44,6 @@ User.init(
       allowNull: true
     },
 
-    profile: {
-      type: DataTypes.STRING,
-      allowNull: true,
-      default: false,
-    },
-
   },
   {
     hooks: {

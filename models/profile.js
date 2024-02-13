@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connections');
 
 
-class Jobs extends Model { }
+class Profile extends Model { }
 
-Jobs.init(
+Profile.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,23 +12,21 @@ Jobs.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    title: {
+
+    first_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
-      type: DataTypes.TEXT,
+
+    last_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    recent_job: {
+      type: DataTypes.STRING,
       allowNull: false
     },
     location: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    category_name: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    avatar: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -36,21 +34,31 @@ Jobs.init(
       type: DataTypes.STRING,
       allowNull: true
     },
+    bio: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    category_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id'
+      }
+    }
+
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'jobs',
+    modelName: 'profile',
   }
 );
 
 
-
-
-
-
-
-
-module.exports = Jobs;
+module.exports = Profile;
