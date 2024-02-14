@@ -1,8 +1,8 @@
-const { Model, DataTypes, STRING } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connections');
 
 
-class Profile extends Model {}
+class Profile extends Model { }
 
 Profile.init(
   {
@@ -12,45 +12,44 @@ Profile.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    
+
     first_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
 
     last_name: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     recent_job: {
       type: DataTypes.STRING,
-      allowNull:false
-    },
-  location: {
-    type: DataTypes.STRING,
-    allowNull:false
-},
-    salary: {
-        type: DataTypes.STRING,
-        allowNull: true
-    },
-    bio: {
-        type: DataTypes.STRING,
-        allowNull:false
-    },
-    
-    category_name : {
-      type:DataTypes.STRING,
       allowNull: false
     },
-    user_id:{
+    location: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    salary: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    bio: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    category_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "user",
-        key:"id"
+        model: 'user',
+        key: 'id'
       }
     }
-    
+
   },
   {
     sequelize,

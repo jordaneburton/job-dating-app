@@ -5,7 +5,11 @@
         "salary": "60000",
         "location": "The river",
         "avatar": "../public/images/watch.jpg",
+<<<<<<< HEAD
         "user_id": 1
+=======
+        "category_name": "Technology"
+>>>>>>> 7ef88548337bee8e17e4513e4744ea7a2f14c39b
     },
     {
         "title": "Junior FullStack Developer",
@@ -13,7 +17,11 @@
         "salary": "40000",
         "location": "Amarillo, TX",
         "avatar": "../public/images/mask.jpg",
+<<<<<<< HEAD
         "user_id": 2
+=======
+        "category_name": "Technology"
+>>>>>>> 7ef88548337bee8e17e4513e4744ea7a2f14c39b
     },
     {
         "title": "Senior Data Scientist",
@@ -21,7 +29,11 @@
         "salary": "20000",
         "location": "San Francisco, CA",
         "avatar": "../public/images/mask.jpg",
+<<<<<<< HEAD
         "user_id": 3
+=======
+        "category_name": "Technology"
+>>>>>>> 7ef88548337bee8e17e4513e4744ea7a2f14c39b
     },
     {
         "title": "Senior Marketing Manager",
@@ -29,7 +41,11 @@
         "salary": "80000",
         "location": "New York City, NY",
         "avatar": "../public/images/mask.jpg",
+<<<<<<< HEAD
         "user_id": 4
+=======
+        "category_name": "Business"
+>>>>>>> 7ef88548337bee8e17e4513e4744ea7a2f14c39b
     },
     {
         "title": "UX/UI Designer",
@@ -37,7 +53,11 @@
         "salary": "80000",
         "location": "Seattle, WA",
         "avatar": "../public/images/mask.jpg",
+<<<<<<< HEAD
         "user_id": 5
+=======
+        "category_name": "Technology"
+>>>>>>> 7ef88548337bee8e17e4513e4744ea7a2f14c39b
     },
     {
         "title": "Marketing Coordinator",
@@ -45,7 +65,11 @@
         "salary": "80000",
         "location": "Chicago, IL",
         "avatar": "../public/images/mask.jpg",
+<<<<<<< HEAD
         "user_id": 6
+=======
+        "category_name": "Business"
+>>>>>>> 7ef88548337bee8e17e4513e4744ea7a2f14c39b
     },
     {
         "title": "Customer Success Specialist",
@@ -53,7 +77,11 @@
         "salary": "80000",
         "location": "Denver, CO",
         "avatar": "../public/images/watch.jpg",
+<<<<<<< HEAD
         "user_id": 7
+=======
+        "category_name": "Customer Service"
+>>>>>>> 7ef88548337bee8e17e4513e4744ea7a2f14c39b
     },
     {
         "title": "Product Manager",
@@ -61,76 +89,90 @@
         "salary": "120000",
         "location": "San Francisco, CA",
         "avatar": "../public/images/geometric.jpg",
+<<<<<<< HEAD
         "user_id": 8
+=======
+        "category_name": "Business"
+>>>>>>> 7ef88548337bee8e17e4513e4744ea7a2f14c39b
     },
     {
         "title": "Senior Software Engineer",
         "description": "Are you an experienced software engineer with a passion for building scalable and efficient applications? Join our team and work on cutting-edge technologies!",
         "salary": "100000",
         "location": "San Francisco, CA",
-        "avatar": ""
+        "avatar": "",
+        "category_name": "Technology"
       },
       {
         "title": "Data Analyst",
         "description": "Are you skilled in data analysis and interpretation? Join our team and help us make data-driven decisions!",
         "salary": "80000",
         "location": "New York City, NY",
-        "avatar": ""
+        "avatar": "",
+        "category_name": "Technology"
       },
       {
         "title": "UX/UI Designer",
         "description": "Are you a creative thinker with a knack for crafting intuitive user experiences and visually stunning interfaces? Join our team and shape the future of digital design!",
         "salary": "80000",
         "location": "Seattle, WA",
-        "avatar": ""
+        "avatar": "",
+        "category_name": "Technology"
       },
       {
         "title": "Marketing Manager",
         "description": "Are you an experienced marketing professional with a passion for developing and executing successful marketing strategies? Join our team and lead our marketing efforts!",
         "salary": "100000",
         "location": "Chicago, IL",
-        "avatar": ""
+        "avatar": "",
+        "category_name": "Business"
       },
       {
         "title": "Systems Administrator",
         "description": "Do you have a strong understanding of system administration and network protocols? Join our team and ensure the stability and security of our IT infrastructure!",
         "salary": "100000",
         "location": "Austin, TX",
-        "avatar": ""
+        "avatar": "",
+        "category_name": "Technology"
       },
       {
         "title": "Digital Marketing Specialist",
         "description": "Are you skilled in online marketing techniques and analytics? Join our team and help us expand our digital presence!",
         "salary": "60000",
         "location": "Los Angeles, CA",
-        "avatar": ""
+        "avatar": "",
+        "category_name": "Business"
       },
       {
         "title": "Financial Analyst",
         "description": "Are you adept at financial modeling and analysis? Join our team and help us make informed financial decisions!",
         "salary": "00000",
         "location": "Boston, MA",
-        "avatar": ""
+        "avatar": "",
+        "category_name": "Business"
       },
       {
         "title": "Mobile App Developer",
         "description": "Are you proficient in mobile app development for iOS and Android platforms? Join our team and create cutting-edge mobile applications!",
         "salary": "100000",
         "location": "Denver, CO",
-        "avatar": ""
+        "avatar": "",
+        "category_name": "Technology"
       },
       {
         "title": "HR Manager",
         "description": "Are you an experienced HR professional with a passion for talent acquisition and employee relations? Join our team and lead our HR initiatives!",
         "salary": "100000",
         "location": "Houston, TX",
-        "avatar": ""
+        "avatar": "",
+        "category_name": "Human Resources"
       },
       {
         "title": "Content Writer",
         "description": "Are you skilled in crafting compelling and engaging content? Join our team and help us create impactful content for our audience!",
         "salary": "120000",
         "location": "Philadelphia, PA",
-        "avatar": ""
+        "avatar": "",
+        "category_name": "Creative Writing"
       }
 ]

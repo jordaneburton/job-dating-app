@@ -44,19 +44,6 @@ User.init(
       allowNull: true
     },
 
-    profile: {
-      type: DataTypes.STRING,
-      allowNull: true,
-      default: false,
-    },
-    profile_id:{
-      type: DataTypes.INTEGER,
-      references:{
-        model: "profile",
-        key: "id"
-      }
-    }
-
   },
   {
     hooks: {
