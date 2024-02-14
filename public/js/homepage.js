@@ -48,7 +48,7 @@ function pullJobDown(cardEl, cardPos) {
   anime({
     targets: cardEl,
     keyframes: [
-      {translateY: '1.5rem'},
+      {bottom: `${1.5*cardPos}rem`},
       {'z-index': `-${cardPos}`},
     ],
     rotate: '1turn',
