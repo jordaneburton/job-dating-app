@@ -44,14 +44,11 @@ function setJobCard(cardEl, cardPos, cardDepth, cardDelay) {
   })
 }
 
-function pullJobDown(cardEl, cardPos) {
+function pullJobDown(cardEl, cardPos, cardDepth) {
   anime({
     targets: cardEl,
-    keyframes: [
-      {bottom: `${1.5*cardPos}rem`},
-      {'z-index': `-${cardPos}`},
-    ],
-    rotate: '1turn',
+    bottom: `${1.5*cardPos}rem`,
+    'z-index': `-${cardDepth}`,
     easing: 'easeInOutExpo',
 
     loop: false,
@@ -62,16 +59,16 @@ function updateCards() {
 
   if (frontCardIndex + 3 < swipeCardEl.length) {
     const upperLimit = frontCardIndex + 3;
-    // setJobCard(swipeCardEl[upperLimit], 3, upperLimit, 300);
+    setJobCard(swipeCardEl[upperLimit], 3, upperLimit, 300);
     
     for (let i = upperLimit - 1; i >= frontCardIndex; i--) {
-      pullJobDown(swipeCardEl[i], i);
+      pullJobDown(swipeCardEl[i], i-frontCardIndex, i);
     }
   } else {
     const upperLimit = swipeCardEl.length - 1;
 
     for (let i = upperLimit; i >= frontCardIndex; i--) {
-      pullJobDown(swipeCardEl[i], i)
+      pullJobDown(swipeCardEl[i], i-frontCardIndex, i)
     }
   }
 }
