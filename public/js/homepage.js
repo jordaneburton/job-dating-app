@@ -1,34 +1,38 @@
 const frontSwipeCardEl = document.querySelector('.front-card');
-const swipeCardEl = document.querySelectorAll('.swipe-card');
+let swipeCardEl = document.querySelectorAll('.waiting-card');
 
-
+const saveJobBtnEl = document.querySelector('#save-job-btn');
+const denyJobBtnEl = document.querySelector('#deny-job-btn');
 
 // front card animate it to the side
 // rest of the cards pull them down by whatever margin and change z-index
 
-// const response = await fetch('/api/job', {
-//   method: 'GET'
-// });
+const saveJobHandler = async (event) => {
+  // Stop the browser from submitting the form so we can do so with JavaScript
+  event.preventDefault();
+  frontSwipeCardEl.setAttribute('style: z-index', '1');
+  saveJob(frontSwipeCardEl);
+};
 
-// if (response.ok) {
-//   const jobCards = JSON.parse(response.json());
-// } else {
-//   alert('Failed to log in');
-// }
-
+const denyJobHandler = async (event) => {
+  // Stop the browser from submitting the form so we can do so with JavaScript
+  event.preventDefault();
+  frontSwipeCardEl.setAttribute('style: z-index', '1');
+  denyJob(frontSwipeCardEl);
+};
 
 function setJobCard(cardEl, cardPos) {
+  // const moveCard = 
   anime({
     targets: cardEl,
-    bottom: `${cardPos}rem`,
-    'z-index': `-${cardPos}`,
+    bottom: `${1.5*cardPos}rem`,
     easing: 'easeInOutExpo',
     keyframes: [
-      {opacity: 0},
-      {opacity: 100}
+      {opacity: 0, 'z-index': `-${cardPos}`},
+      {opacity: 100, 'z-index': `-${cardPos}`}
     ],
 
-    loop: true,
+    loop: false,
   })
 
 }
@@ -42,7 +46,7 @@ function pullJobDown(cardEl, cardPos) {
     ],
     easing: 'easeInOutExpo',
 
-    loop: true,
+    loop: false,
   })
 }
 
@@ -78,6 +82,29 @@ function saveJob(cardEl) {
   // remove card from queue
 };
 
+async function init() {
+  
+  const response = await fetch('/api/job', {
+    method: 'GET',
+  });
 
+  if (response.ok) {
+    console.log('successful pull of data');
+  } else {
+    alert('Failed to get data from server');
+  }
+  
 
-saveJob(frontSwipeCardEl)
+  let jobPosition = 0;
+
+  // setup and animate card for each jobEl
+  for (let i = 3; i >= 0; i--) {
+    setJobCard(swipeCardEl[i], i)
+  }
+}
+
+init();
+
+saveJobBtnEl.addEventListener('click', saveJobHandler);
+denyJobBtnEl.addEventListener('click', denyJobHandler);
+// saveJob(frontSwipeCardEl)

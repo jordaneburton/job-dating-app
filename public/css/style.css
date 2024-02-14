@@ -58,6 +58,7 @@ ul>img {
 .swipe-card {
     width: 20rem;
     height: 24rem;
+    z-index: -3;
     /* animation-name: stack-card;
     animation-duration: 8s;
     animation-iteration-count: infinite; */
