@@ -5,10 +5,8 @@ const { Favorite } = require('../models/Favorite')
 module.exports = {
     getFunc: async (req, res) => {
         try {
-            Job.findAll({
-            })
-                .then(jobs => res.status(200).json({ message: 'SUCCESS: GET connected to jobRoutes' })
-                )
+            const jobs = await Job.findAll();
+            res.status(200).json({ message: 'SUCCESS: GET connected to jobRoutes', jobs })
         } catch (err) {
             res.status(404).json(err);
         }

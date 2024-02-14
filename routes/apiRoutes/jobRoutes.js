@@ -5,6 +5,7 @@ const {
   getIdFunc,
   deleteIdFunc,
   getFavFunc,
+
 } = require('../../controllers/jobControllers');
 
 

@@ -1,6 +1,7 @@
 const sequelize = require('../config/connections');
 const { User, Jobs } = require('../models');
 
+
 const seedJob = require('./jobSeed.json');
 const seedUser = require('./userSeed.json');
 
@@ -24,7 +25,7 @@ const seedAll = async () => {
     returning: true,
   });
 
-  await Jobs.bulkCreate(seedJob)
+    await Jobs.bulkCreate(seedJob)
 
   process.exit(0);
 >>>>>>> 57b818a792852e3f4b0ccd315d98012081dcb644

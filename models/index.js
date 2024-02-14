@@ -6,12 +6,9 @@ const Profile = require('./profile.js');
 const Favorite = ('./Favorite.js')
 
 User.belongsToMany(Jobs, {
-    through: {
-        model: Favorite,
-        unique: false
-
-    },
-    as: 'user_jobs'
+    through: Favorite,
+    as: 'user_jobs',
+    foreignKey: "user_id"
 })
 
 Jobs.belongsToMany(User, {
@@ -23,11 +20,9 @@ Jobs.belongsToMany(User, {
 })
 
 User.belongsTo(Profile, {
-    through:{
-        model:Favorite,
-        unique:false
-    },
-    as:'user_profile'
+  
+    as:'user_profile',
+    foreignKey: "user_id"
 })
 
 

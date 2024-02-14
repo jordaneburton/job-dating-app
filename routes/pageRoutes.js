@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { getHome, 
         getJobs, 
-        getProfile, 
-        getLogin 
+        putProfile, 
+        getLogin, 
+        getSavedJobs
     } = require('../controllers/pageControllers');
 const withAuth = require('../utils/helpers');
 
@@ -13,9 +14,12 @@ router.route('/jobs')
 .get(getJobs)
 
 router.route('/profile/:id')
-.get(getProfile)
+.put(putProfile)
 
 router.route('/login')
 .get(getLogin)
+
+router.route('/savedJobs')
+.get(getSavedJobs)
 
 module.exports = router;
