@@ -9,7 +9,7 @@ const withAuth = require('../utils/helpers');
 router.route('/') // TEMPORARY home page router
 .get(withAuth, getHome)
 
-router.route('/profile/:id')
+router.route('/profile')
 .put(putProfile)
 
 router.route('/login')
