@@ -106,15 +106,19 @@ async function saveJob(cardEl) {
 };
 
 async function init() {
-  
-  // const response = await fetch('/api/job', {
-  //   method: 'GET',
-  // });
+  try {
+    const response = await fetch('/api/job', {
+      method: 'GET',
+    });
+    console.log(response);
+  } catch(err) {
+    console.error(err);
+
+  }
 
   // if (response.ok) {
   //   console.log('successful pull of data');
   // } else {
-  //   alert('Failed to get data from server');
   // }
   
 
