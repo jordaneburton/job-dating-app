@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { getHome, 
         getJobs, 
-        getProfile, 
+        putProfile, 
         getLogin, 
         getSavedJobs
     } = require('../controllers/pageControllers');
@@ -14,7 +14,7 @@ router.route('/jobs')
 .get(getJobs)
 
 router.route('/profile/:id')
-.get(getProfile)
+.put(putProfile)
 
 router.route('/login')
 .get(getLogin)
