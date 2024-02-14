@@ -1,57 +1,83 @@
-const frontSwipeCardEl = document.querySelector('.front-card');
-let swipeCardEl = document.querySelectorAll('.waiting-card');
+// const frontSwipeCardEl = document.querySelector('.front-card');
+const swipeCardEl = document.querySelectorAll('.swipe-card');
 
 const saveJobBtnEl = document.querySelector('#save-job-btn');
 const denyJobBtnEl = document.querySelector('#deny-job-btn');
-
+// keep track of the card in front
+let frontCardIndex = 0;
 // front card animate it to the side
 // rest of the cards pull them down by whatever margin and change z-index
 
 const saveJobHandler = async (event) => {
   // Stop the browser from submitting the form so we can do so with JavaScript
   event.preventDefault();
-  frontSwipeCardEl.setAttribute('style: z-index', '1');
-  saveJob(frontSwipeCardEl);
+
+  saveJob(swipeCardEl[frontCardIndex]);
+  frontCardIndex++;
+  updateCards();
+  console.log(frontCardIndex);
 };
 
 const denyJobHandler = async (event) => {
   // Stop the browser from submitting the form so we can do so with JavaScript
   event.preventDefault();
-  frontSwipeCardEl.setAttribute('style: z-index', '1');
-  denyJob(frontSwipeCardEl);
+
+  denyJob(swipeCardEl[frontCardIndex]);
+  frontCardIndex++;
+  updateCards();
+  console.log(frontCardIndex);
 };
 
-function setJobCard(cardEl, cardPos) {
-  // const moveCard = 
+function setJobCard(cardEl, cardPos, cardDepth, cardDelay) {
   anime({
     targets: cardEl,
     bottom: `${1.5*cardPos}rem`,
     easing: 'easeInOutExpo',
     keyframes: [
-      {opacity: 0, 'z-index': `-${cardPos}`},
-      {opacity: 100, 'z-index': `-${cardPos}`}
+      {opacity: 0, 'z-index': `-${cardDepth}`,},
+      {opacity: 100, 'z-index': `-${cardDepth}`,},
     ],
+    
+    delay: cardDelay,
 
     loop: false,
   })
-
 }
 
 function pullJobDown(cardEl, cardPos) {
   anime({
     targets: cardEl,
     keyframes: [
-      {translateY: '1rem'},
+      {translateY: '1.5rem'},
       {'z-index': `-${cardPos}`},
     ],
+    rotate: '1turn',
     easing: 'easeInOutExpo',
 
     loop: false,
   })
 }
 
+function updateCards() {
+
+  if (frontCardIndex + 3 < swipeCardEl.length) {
+    const upperLimit = frontCardIndex + 3;
+    // setJobCard(swipeCardEl[upperLimit], 3, upperLimit, 300);
+    
+    for (let i = upperLimit - 1; i >= frontCardIndex; i--) {
+      pullJobDown(swipeCardEl[i], i);
+    }
+  } else {
+    const upperLimit = swipeCardEl.length - 1;
+
+    for (let i = upperLimit; i >= frontCardIndex; i--) {
+      pullJobDown(swipeCardEl[i], i)
+    }
+  }
+}
+
 // animates and removes job from card queue
-function denyJob(cardEl) {
+async function denyJob(cardEl) {
   anime({
     targets: cardEl,
     translateX: '-20rem',
@@ -62,11 +88,11 @@ function denyJob(cardEl) {
     loop: false,
   })
 
-  // remove card from queue
+  // remove card from 
 };
 
 // animates and saves a job to our 'favorite' table
-function saveJob(cardEl) {
+async function saveJob(cardEl) {
   anime({
     targets: cardEl,
     translateX: '20rem',
@@ -84,26 +110,33 @@ function saveJob(cardEl) {
 
 async function init() {
   
-  const response = await fetch('/api/job', {
-    method: 'GET',
-  });
+  // const response = await fetch('/api/job', {
+  //   method: 'GET',
+  // });
 
-  if (response.ok) {
-    console.log('successful pull of data');
-  } else {
-    alert('Failed to get data from server');
-  }
+  // if (response.ok) {
+  //   console.log('successful pull of data');
+  // } else {
+  //   alert('Failed to get data from server');
+  // }
   
 
   let jobPosition = 0;
 
   // setup and animate card for each jobEl
-  for (let i = 3; i >= 0; i--) {
-    setJobCard(swipeCardEl[i], i)
+  if (frontCardIndex + 3 <= swipeCardEl.length) {
+    for (let i = 3 + frontCardIndex; i >= 0 + frontCardIndex; i--) {
+      setJobCard(swipeCardEl[i], i, i, i*300)
+    }
+  } else {
+    for (let i = swipeCardEl.length - 1; i > frontCardIndex + 1; i--) {
+      setJobCard(swipeCardEl[i], i, i, i*300)
+    }
   }
 }
 
 init();
+console.log(swipeCardEl);
 
 saveJobBtnEl.addEventListener('click', saveJobHandler);
 denyJobBtnEl.addEventListener('click', denyJobHandler);
