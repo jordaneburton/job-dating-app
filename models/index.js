@@ -23,21 +23,21 @@ Jobs.belongsToMany(User, {
 })
 
 User.belongsTo(Profile, {
-    through:{
-        model:Favorite,
-        unique:false
+    through: {
+        model: Favorite,
+        unique: false
     },
-    as:'user_profile'
+    as: 'user_profile'
 })
 
 
 Profile.belongsTo(User, {
-    foreignKey:"user_id"
+    foreignKey: "user_id"
 })
 
 
 User.hasOne(Profile, {
-    foreignKey:"user_id"
+    foreignKey: "user_id"
 })
 
 module.exports = { User, Jobs, Favorite, Profile };

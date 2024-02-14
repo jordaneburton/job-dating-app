@@ -2,6 +2,7 @@ const router = require('express').Router();
 const {
   getFunc,
   postFunc,
+  loginFunc
 } = require('../../controllers/userControllers');
 
 const withAuth  = require('../../utils/helpers');

@@ -46,7 +46,6 @@ User.init(
       beforeCreate: async (newUserData) => {
         try {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        console.log(newUserData)
         return newUserData;
         }
         catch (err) {

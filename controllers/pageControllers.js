@@ -3,9 +3,12 @@ const User = require('../models/user');
 module.exports = {
     getHome: async (req, res) => {
         try {
-            return res.render('homepage', {
-                logged_in: req.session.logged_in 
-            });
+            if (!req.session.profile_created) {
+                res.render('homepage')
+            }
+            else (req.session.profile_created); {
+                res.render('profile')
+            }
         } catch (err) {
             res.status(500).json(err);
         }
@@ -14,7 +17,7 @@ module.exports = {
     getJobs: async (req, res) => {
         try {
             return res.render('jobs', {
-                logged_in: req.session.logged_in 
+                logged_in: req.session.logged_in
             });
         } catch (err) {
             res.status(500).json(err);
@@ -25,10 +28,10 @@ module.exports = {
         try {
             // Get all projects and JOIN with user data
             const userData = await User.findByPk(req.params.id);
-        
+
             // Serialize data so the template can read it
             const user = userData.get({ plain: true });
-        
+
             return res.render('profile', {
                 // attributes: { exclude: ['password'] }
                 user: user     // ONLY ONE OF THESE SHOULD BE USED

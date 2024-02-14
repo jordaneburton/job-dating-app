@@ -48,7 +48,7 @@ Profile.init(
         model: 'user',
         key: 'id'
       }
-    }
+    },
 
   },
   {

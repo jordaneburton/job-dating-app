@@ -29,12 +29,9 @@ module.exports = {
             req.session.save(() => {
                 req.session.user_id = userData.id;
                 req.session.logged_in = true;
-                
-            console.log(userData)
             res.status(200).json({ userData })
             })
         } catch (err) {
-            console.error(err);
             res.status(500).json(err);
         }
     },
@@ -50,16 +47,15 @@ module.exports = {
             });
      
           if (!userData) {
-            res
-              .status(400).json({ message: 'Incorrect email or password, please try again' });
-            return;
+            
+             res.status(400).json({ message: 'Incorrect email or password, please try again' });
+
           }
      
           const validPassword = await userData.checkPassword(req.body.password);
      
           if (!validPassword) {
             res.status(400).json({ message: 'Incorrect email or password, please try again' });
-            return;
           }
      
           req.session.save(() => {

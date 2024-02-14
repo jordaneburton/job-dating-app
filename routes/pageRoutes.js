@@ -10,10 +10,10 @@ router.route('/') // TEMPORARY home page router
 .get(withAuth, getHome)
 
 router.route('/jobs')
-.get(getJobs)
+.get(withAuth, getJobs)
 
 router.route('/profile/:id')
-.get(getProfile)
+.get(withAuth, getProfile)
 
 router.route('/login')
 .get(getLogin)
