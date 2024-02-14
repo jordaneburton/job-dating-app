@@ -46,4 +46,14 @@ module.exports = {
             res.status(500).json(err);
         }
     },
+
+    getSavedJobs: async (req, res) => {
+        try {
+            return res.render('savedJobs', {
+                logged_in: req.session.logged_in 
+            });
+        } catch (err) {
+            res.status(500).json(err);
+        }
+    },
 }

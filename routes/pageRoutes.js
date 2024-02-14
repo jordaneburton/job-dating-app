@@ -2,7 +2,8 @@ const router = require('express').Router();
 const { getHome, 
         getJobs, 
         getProfile, 
-        getLogin 
+        getLogin, 
+        getSavedJobs
     } = require('../controllers/pageControllers');
 const { withAuth } = require('../utils/helpers');
 
@@ -17,5 +18,8 @@ router.route('/profile/:id')
 
 router.route('/login')
 .get(getLogin)
+
+router.route('/savedJobs')
+.get(getSavedJobs)
 
 module.exports = router;
