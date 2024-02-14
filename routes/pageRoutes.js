@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const { getHome, 
-        putProfile, 
+const { getHome,  
         getLogin, 
         getSavedJobs
     } = require('../controllers/pageControllers');

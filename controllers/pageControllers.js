@@ -1,5 +1,6 @@
-const User = require('../models/user');
-const Jobs = require('../models/jobs')
+// const User = require('../models/user');
+// const Jobs = require('../models/jobs')
+const { User, Jobs, Profile } = require('../models');
 
 module.exports = {
     getHome: async (req, res) => {
@@ -11,6 +12,7 @@ module.exports = {
                 jobs,
                 logged_in: req.session.logged_in 
             });
+          
         } catch (err) {
             res.status(500).json(err);
         }

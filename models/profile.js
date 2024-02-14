@@ -28,7 +28,7 @@ Profile.init(
     },
     location: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     salary: {
       type: DataTypes.STRING,
