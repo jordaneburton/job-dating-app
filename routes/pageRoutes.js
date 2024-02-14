@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { getHome, 
-        getJobs, 
         putProfile, 
         getLogin, 
         getSavedJobs
@@ -9,9 +8,6 @@ const withAuth = require('../utils/helpers');
 
 router.route('/') // TEMPORARY home page router
 .get(withAuth, getHome)
-
-router.route('/jobs')
-.get(getJobs)
 
 router.route('/profile/:id')
 .put(putProfile)
