@@ -12,11 +12,25 @@
         </svg>
     </button>
 
+    {{#each job as |jobCard|}}
+        <section class="position-absolute">
+            <div class="card swipe-card border border-3 border-info-subtle">
+                <div class="card-body">
+                    <h3 class="card-title">jobCard.title</h3>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">jobCard.location</h6>
+                    <p class="card-text">jobCard.description</p>
+                </div>
+            </div>
+        </section>
+    {{/each}}
+
     <section class="position-absolute">
         <div class="card swipe-card border border-3 border-info-subtle">
             <div class="card-body">
                 <h3 class="card-title">Job Title 1</h3>
+                <h4 class="card-subtitle mb-2 text-body-secondary">Job Subtitle</h4>
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident facere totam perferendis odio fugit beatae quam minus nobis! Aliquam impedit ut eius magni eligendi placeat laborum illum, necessitatibus delectus voluptatum.</p>
+                <h4 class="card-subtitle mt-2 fw-bold text-body-secondary">40000-60000</h4>
             </div>
         </div>
     </section>
