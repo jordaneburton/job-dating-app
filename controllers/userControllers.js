@@ -18,6 +18,7 @@ module.exports = {
             res.status(500).json(err);
         }
     },
+
     postFunc: async (req, res) => {
         try {
             const userData = await User.create({
@@ -29,6 +30,10 @@ module.exports = {
             req.session.save(() => {
                 req.session.user_id = userData.id;
                 req.session.logged_in = true;
+                req.session.profile_created = false;
+   
+                
+            console.log(userData)
             res.status(200).json({ userData })
             })
         } catch (err) {
