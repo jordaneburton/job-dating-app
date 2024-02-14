@@ -1,5 +1,5 @@
 const { Jobs, Profile } = require('../models');
-const User = require('../models/user');
+const User = require('../models');
 
 module.exports = {
     getHome: async (req, res) => {
@@ -22,6 +22,9 @@ module.exports = {
                     logged_in: req.session.logged_in,
                 });
             }
+            
+            return res.render('homepage', {
+            })
         } catch (err) {
             res.status(500).json(err);
         }
