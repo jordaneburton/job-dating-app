@@ -1,9 +1,14 @@
 const User = require('../models/user');
+const Jobs = require('../models/jobs')
 
 module.exports = {
     getHome: async (req, res) => {
         try {
+            const jobData = await Jobs.findAll();
+            const jobs = jobData.map((job) => 
+            job.get({ plain: true }));
             return res.render('homepage', {
+                jobs,
                 logged_in: req.session.logged_in 
             });
         } catch (err) {
