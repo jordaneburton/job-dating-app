@@ -1,14 +1,19 @@
 const router = require('express').Router();
-const { getHome, 
+const { getFunc, 
+        getHome, 
         getJobs, 
         getProfile, 
         getLogin, 
         getSavedJobs
     } = require('../controllers/pageControllers');
-const withAuth = require('../utils/helpers');
+const { withAuth } = require('../utils/helpers');
 
-router.route('/') // TEMPORARY home page router
-.get(withAuth, getHome)
+
+router.route('/') // POST-PRODUCTION home page router
+.get(getFunc);
+
+router.route('/home') // TEMPORARY home page router
+.get(getHome)
 
 router.route('/jobs')
 .get(withAuth, getJobs)

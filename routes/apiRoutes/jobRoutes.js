@@ -2,10 +2,7 @@ const router = require('express').Router();
 const {
   getFunc,
   postFunc,
-  getIdFunc,
-  deleteIdFunc,
-  getFavFunc,
-
+  deleteFunc,
 } = require('../../controllers/jobControllers');
 
 
@@ -14,8 +11,6 @@ router.route('/')
 .post(postFunc);
 
 router.route('/:id')
-.delete(deleteIdFunc)
-// .get(getIdFunc)
-.get(getFavFunc);
+.delete(deleteFunc)
 
 module.exports = router;

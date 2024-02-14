@@ -1,6 +1,14 @@
 const User = require('../models/user');
 
 module.exports = {
+    getFunc: async (req, res) => {
+        try {
+            res.status(200).json({message: 'SUCCESS: GET connected to pageRoutes'})
+        } catch (err) {
+            res.status(500).json(err);
+        }
+    },
+
     getHome: async (req, res) => {
         try {
             if (!req.session.profile_created) {
