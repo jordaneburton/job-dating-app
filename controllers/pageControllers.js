@@ -4,26 +4,27 @@ const User = require('../models');
 module.exports = {
     getHome: async (req, res) => {
         try {
-            if (req.session.profile_created) {
-                const catData = Profile.category
-                const salData = Profile.salary
-                const jobData = await Jobs.findAll({
-                    where:
-                    {
-                        salary: salData,
-                        category: catData
-                    }
-                })
-                const jobs = jobData.map((job) =>
-                    job.get({ plain: true })
-                );
-                return res.render('homepage', {
-                    jobs,
-                    logged_in: req.session.logged_in,
-                });
-            }
-            
+            // if (req.session.profile_created) {
+            //     const catData = Profile.category
+            //     const salData = Profile.salary
+            //     const jobData = await Jobs.findAll({
+            //         where:
+            //         {
+            //             salary: salData,
+            //             category: catData
+            //         }
+            //     })
+            //     const jobs = jobData.map((job) =>
+            //         job.get({ plain: true })
+            //     );
+            //     return res.render('homepage', {
+            //         jobs,
+            //         logged_in: req.session.logged_in,
+            //     });
+            // }
+
             return res.render('homepage', {
+                logged_in: req.session.logged_in,
             })
         } catch (err) {
             res.status(500).json(err);
