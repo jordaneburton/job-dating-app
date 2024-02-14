@@ -5,11 +5,7 @@
         "salary": "60000",
         "location": "The river",
         "avatar": "../public/images/watch.jpg",
-<<<<<<< HEAD
-        "user_id": 1
-=======
         "category_name": "Technology"
->>>>>>> 7ef88548337bee8e17e4513e4744ea7a2f14c39b
     },
     {
         "title": "Junior FullStack Developer",
@@ -17,11 +13,7 @@
         "salary": "40000",
         "location": "Amarillo, TX",
         "avatar": "../public/images/mask.jpg",
-<<<<<<< HEAD
-        "user_id": 2
-=======
         "category_name": "Technology"
->>>>>>> 7ef88548337bee8e17e4513e4744ea7a2f14c39b
     },
     {
         "title": "Senior Data Scientist",
@@ -29,11 +21,7 @@
         "salary": "20000",
         "location": "San Francisco, CA",
         "avatar": "../public/images/mask.jpg",
-<<<<<<< HEAD
-        "user_id": 3
-=======
         "category_name": "Technology"
->>>>>>> 7ef88548337bee8e17e4513e4744ea7a2f14c39b
     },
     {
         "title": "Senior Marketing Manager",
@@ -41,11 +29,7 @@
         "salary": "80000",
         "location": "New York City, NY",
         "avatar": "../public/images/mask.jpg",
-<<<<<<< HEAD
-        "user_id": 4
-=======
         "category_name": "Business"
->>>>>>> 7ef88548337bee8e17e4513e4744ea7a2f14c39b
     },
     {
         "title": "UX/UI Designer",
@@ -53,11 +37,7 @@
         "salary": "80000",
         "location": "Seattle, WA",
         "avatar": "../public/images/mask.jpg",
-<<<<<<< HEAD
-        "user_id": 5
-=======
         "category_name": "Technology"
->>>>>>> 7ef88548337bee8e17e4513e4744ea7a2f14c39b
     },
     {
         "title": "Marketing Coordinator",
@@ -65,11 +45,7 @@
         "salary": "80000",
         "location": "Chicago, IL",
         "avatar": "../public/images/mask.jpg",
-<<<<<<< HEAD
-        "user_id": 6
-=======
         "category_name": "Business"
->>>>>>> 7ef88548337bee8e17e4513e4744ea7a2f14c39b
     },
     {
         "title": "Customer Success Specialist",
@@ -77,11 +53,7 @@
         "salary": "80000",
         "location": "Denver, CO",
         "avatar": "../public/images/watch.jpg",
-<<<<<<< HEAD
-        "user_id": 7
-=======
         "category_name": "Customer Service"
->>>>>>> 7ef88548337bee8e17e4513e4744ea7a2f14c39b
     },
     {
         "title": "Product Manager",
@@ -89,11 +61,7 @@
         "salary": "120000",
         "location": "San Francisco, CA",
         "avatar": "../public/images/geometric.jpg",
-<<<<<<< HEAD
-        "user_id": 8
-=======
         "category_name": "Business"
->>>>>>> 7ef88548337bee8e17e4513e4744ea7a2f14c39b
     },
     {
         "title": "Senior Software Engineer",
