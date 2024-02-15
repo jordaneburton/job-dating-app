@@ -1,14 +1,12 @@
 [
     {
-        "first_name": "Jake",
-        "last_name": "Smith",
+        "user_name": "Jake",
         "email": "jakerusmith@gmail.com",
         "password": "nice try",
         "avatar": null
     },
     {
-        "first_name": "John",
-        "last_name": "Dennis",
+        "user_name": "John",
         "email": "johnnyD@gmail.com",
         "password": "thisismyrealpassword",
         "avatar": null

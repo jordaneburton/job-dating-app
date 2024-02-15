@@ -2,7 +2,6 @@ const router = require('express').Router();
 const {
   getFunc,
   postFunc,
-  getIdFunc,
   deleteIdFunc,
   getFavFunc,
 
@@ -15,7 +14,7 @@ router.route('/')
 
 router.route('/:id')
 .delete(deleteIdFunc)
-.get(getIdFunc)
+// .get(getIdFunc)
 .get(getFavFunc);
 
 module.exports = router;
