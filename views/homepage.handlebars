@@ -12,13 +12,13 @@
         </svg>
     </button>
 
-    {{#each job as |jobCard|}}
+    {{#each jobs as |jobCard|}}
         <section class="position-absolute">
             <div class="card swipe-card border border-3 border-info-subtle">
                 <div class="card-body">
-                    <h3 class="card-title">jobCard.title</h3>
-                    <h6 class="card-subtitle mb-2 text-body-secondary">jobCard.location</h6>
-                    <p class="card-text">jobCard.description</p>
+                    <h3 class="card-title">{{jobCard.title}}</h3>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">{{jobCard.location}}</h6>
+                    <p class="card-text">{{jobCard.description}}</p>
                 </div>
             </div>
         </section>

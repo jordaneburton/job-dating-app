@@ -5,9 +5,11 @@ const { getHome,
     } = require('../controllers/pageControllers');
 const withAuth = require('../utils/helpers');
 
-router.route('/')
-.get(getHome)
-// .get(withAuth, getHome)
+router.route('/') // TEMPORARY home page router
+.get(withAuth, getHome)
+
+router.route('/profile')
+.put(putProfile)
 
 router.route('/login')
 .get(getLogin)

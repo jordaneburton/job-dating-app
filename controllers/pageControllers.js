@@ -1,42 +1,27 @@
-const { Jobs, Profile } = require('../models');
-const User = require('../models');
+// const User = require('../models/user');
+// const Jobs = require('../models/jobs')
+const { User, Jobs, Profile } = require('../models');
 
 module.exports = {
     getHome: async (req, res) => {
         try {
-            // if (req.session.profile_created) {
-            //     const catData = Profile.category
-            //     const salData = Profile.salary
-            //     const jobData = await Jobs.findAll({
-            //         where:
-            //         {
-            //             salary: salData,
-            //             category: catData
-            //         }
-            //     })
-            //     const jobs = jobData.map((job) =>
-            //         job.get({ plain: true })
-            //     );
-            //     return res.render('homepage', {
-            //         jobs,
-            //         logged_in: req.session.logged_in,
-            //     });
-            // }
-
+            const jobData = await Jobs.findAll();
+            const jobs = jobData.map((job) => 
+            job.get({ plain: true }));
             return res.render('homepage', {
-                logged_in: req.session.logged_in,
-            })
+                jobs,
+                logged_in: req.session.logged_in 
+            });
+          
         } catch (err) {
             res.status(500).json(err);
         }
     },
 
-
-
-    getSavedJobs: async (req, res) => {
+    getJobs: async (req, res) => {
         try {
-            return res.render('savedJobs', {
-                logged_in: req.session.logged_in
+            return res.render('jobs', {
+                logged_in: req.session.logged_in 
             });
         } catch (err) {
             res.status(500).json(err);
@@ -53,7 +38,7 @@ module.exports = {
                 salary: req.body.salary,
                 bio: req.body.bio
             });
-
+            
             console.log(userData);
             req.session.profile_created = true;
             res.status(200).json({ userData });
@@ -71,4 +56,13 @@ module.exports = {
         }
     },
 
+    getSavedJobs: async (req, res) => {
+        try {
+            return res.render('savedJobs', {
+                logged_in: req.session.logged_in 
+            });
+        } catch (err) {
+            res.status(500).json(err);
+        }
+    },
 }

@@ -2,7 +2,6 @@ const router = require('express').Router();
 const {
   getFunc,
   postFunc,
-  getIdFunc,
   deleteIdFunc,
   getFavFunc,
 
