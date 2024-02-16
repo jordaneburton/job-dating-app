@@ -1,11 +1,18 @@
-const User = require('../models/user');
+// const User = require('../models/user');
+// const Jobs = require('../models/jobs')
+const { User, Jobs, Profile } = require('../models');
 
 module.exports = {
     getHome: async (req, res) => {
         try {
+            const jobData = await Jobs.findAll();
+            const jobs = jobData.map((job) => 
+            job.get({ plain: true }));
             return res.render('homepage', {
+                jobs,
                 logged_in: req.session.logged_in 
             });
+          
         } catch (err) {
             res.status(500).json(err);
         }
@@ -21,18 +28,20 @@ module.exports = {
         }
     },
 
-    getProfile: async (req, res) => {
+    putProfile: async (req, res) => {
         try {
-            // Get all projects and JOIN with user data
-            const userData = await User.findByPk(req.params.id);
-        
-            // Serialize data so the template can read it
-            const user = userData.get({ plain: true });
-        
-            return res.render('profile', {
-                // attributes: { exclude: ['password'] }
-                user: user     // ONLY ONE OF THESE SHOULD BE USED
+            const userData = await Profile.create({
+                firstName: req.body.firstName,
+                lastName: req.body.lastName,
+                recentJob: req.body.recentJob,
+                category: req.body.category,
+                salary: req.body.salary,
+                bio: req.body.bio
             });
+            
+            console.log(userData);
+            req.session.profile_created = true;
+            res.status(200).json({ userData });
         } catch (err) {
             res.status(500).json(err);
         }
