@@ -20,9 +20,20 @@
 ###Technologies
 
 HTML
+
 Handlebars JS
+
 Anime JS
+
 Javascript
+
+CSS
+
+Bootstrap
+
+MySQL
+
+RESTful API
 
 ###Useage
 
@@ -31,19 +42,30 @@ This app is perfect to use for a job search. It easily lets users search through
 ###Authors
 
 Jordan Burton
+
 jordane.burton@gmail.com
+
 GitHub:https://github.com/jordaneburton
 
+
 Jake Smith
+
 jakerusmith@gmail.com
+
 GitHub:https://github.com/jakeshmith
 
+
 Michael Davidson
+
 Msdavid55@gmail.com
+
 GitHub:https://github.com/Msteven5
 
+
 John Dennis
+
 johnd555@gmail.com
+
 GitHub:https://github.com/JohnDennis2
 
 
