@@ -3,11 +3,11 @@
   Thank you for visiting Work in Progress!
 
 ###Table of Contents
-[Description](https://github.com/jordaneburton/job-dating-app/blob/main/README.md###Description)
-[Technologies](https://github.com/jordaneburton/job-dating-app/blob/main/README.md###Technologies)
-[Useage](https://github.com/jordaneburton/job-dating-app/blob/main/README.md###Useage)
-[Authors](https://github.com/jordaneburton/job-dating-app/blob/main/README.md###Authors)
-[Website Screenshot](https://github.com/jordaneburton/job-dating-app/blob/main/README.md###WebsiteScreenshot)
+1. [Description](https://github.com/jordaneburton/job-dating-app/blob/main/README.md###Description)
+2. [Technologies](https://github.com/jordaneburton/job-dating-app/blob/main/README.md###Technologies)
+3. [Useage](https://github.com/jordaneburton/job-dating-app/blob/main/README.md###Useage)
+4. [Authors](https://github.com/jordaneburton/job-dating-app/blob/main/README.md###Authors)
+5. [Website Screenshot](https://github.com/jordaneburton/job-dating-app/blob/main/README.md###WebsiteScreenshot)
 
 ###Description
 
